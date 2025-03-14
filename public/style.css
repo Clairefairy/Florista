@@ -1,0 +1,163 @@
+/* Estilo geral */
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('/public/Imagens/flores.jpg'); /* Plano de fundo florido */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Centraliza todos os textos */
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8);  /* Fundo branco com transparência */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 450px; 
+  margin: 50px auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* Estilo para o campo de pesquisa */
+input {
+  padding: 12px 8px;
+  width: 90%; 
+  max-width: 90%; 
+  border-radius: 25px;
+  border: 2px solid #2c3e50;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2980b9;
+}
+
+
+/* Estilo para o botão de pesquisa */
+button {
+  padding: 12px 20px;
+  border-radius: 25px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #3498db;
+}
+
+/* Estilo para o resultado da pesquisa */
+#resultado {
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 20px;
+  border-top: 2px solid #2c3e50;
+}
+
+.flor {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 40px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: inline-block; /* Garante que as flores se alinhem de forma correta */
+  width: 100%;
+  max-width: 250px; /* Limita a largura máxima do cartão da flor */
+  margin-right: 20px; /* Adiciona espaço entre as flores */
+}
+
+.flor img {
+  border-radius: 8px;
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  max-width: 350px;
+  transition: transform 0.3s ease;
+}
+
+.flor img:hover {
+  transform: scale(1.2);  /* Aumenta a imagem ainda mais ao passar o mouse */
+}
+
+h3 {
+  color: #2980b9;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+p strong {
+  color: #2c3e50;
+}
+
+.flor:hover {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  /* Ajusta o container para telas menores */
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  input {
+    width: 90%;
+    max-width: none; /* Remove a limitação de largura do campo de pesquisa */
+  }
+
+  /* Alinhamento das flores no celular */
+  .flor {
+    width: 100%; /* Flores ocupam toda a largura disponível */
+    margin-right: 0; /* Remove o espaço direito entre as flores */
+    margin-bottom: 15px; /* Adiciona margem inferior para separar as flores */
+  }
+
+  /* Ajuste nas imagens das flores para telas menores */
+  .flor img {
+    max-width: 100%; /* As imagens ocupam 100% da largura da flor */
+  }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem; /* Menor tamanho de fonte para título em telas muito pequenas */
+  }
+
+  button {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte do botão */
+  }
+
+  .flor {
+    padding: 15px; /* Menor padding para cartões em telas pequenas */
+  }
+}
